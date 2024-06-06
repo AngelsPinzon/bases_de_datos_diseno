@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos y Resúmenes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Top Artículos y Resúmenes</h1>
+        <div class="mt-3">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Resumen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in titles_summaries %}
+                    <tr>
+                        <td>{{ item['Title'] }}</td>
+                        <td>{{ item['Summary'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
