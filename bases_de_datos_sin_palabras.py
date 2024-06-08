@@ -22,7 +22,7 @@ df.head(2000)
 grouped = df.groupby('Source title')['Title'].count()
 plt.figure(figsize=(20, 10))
 grouped.plot(kind='bar')
-plt.show(2000)
+plt.show()
 
 grouped = df.groupby('Source title')['Title'].count().sort_values(ascending=False)
 top_sources = grouped.head(10)
